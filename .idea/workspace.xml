@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a5118e-b77d-46e4-ade1-24a373bd63a2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/university_A1.ldb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/university_A1.mdb" afterPath="$PROJECT_DIR$/university_A1.mdb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application.py" afterPath="$PROJECT_DIR$/Application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginWindow.py" afterPath="$PROJECT_DIR$/LoginWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StudentListWindow.py" afterPath="$PROJECT_DIR$/StudentListWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/UserAccessor.py" afterPath="$PROJECT_DIR$/dao/UserAccessor.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +64,7 @@
           <file leaf-file-name="StudentListWindow.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/StudentListWindow.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="905">
+                <state relative-caret-position="1175">
                   <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
                   <folding>
                     <element signature="e#23#32#0" expanded="true" />
@@ -203,7 +198,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="StudentAccessor.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="StudentAccessor.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dao/StudentAccessor.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="590">
@@ -224,6 +219,16 @@
                     <marker date="1513025081411" expanded="true" signature="2710:2740" ph="DELETE FROM " />
                     <marker date="1513025081411" expanded="true" signature="2710:2741" ph="DELETE FROM " />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -287,6 +292,7 @@
         <option value="$PROJECT_DIR$/LoginWindow.py" />
         <option value="$PROJECT_DIR$/dao/UserAccessor.py" />
         <option value="$PROJECT_DIR$/StudentListWindow.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -756,18 +762,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dao/SectionAccessor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1512989824719" expanded="true" signature="343:399" ph="DELETE FROM " />
-            <marker date="1512989824719" expanded="true" signature="718:825" ph="SELECT s.sec... section" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vo/Student.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1240,7 +1234,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StudentListWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="905">
+        <state relative-caret-position="1175">
           <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
@@ -1268,6 +1262,14 @@
             <marker date="1513025081411" expanded="true" signature="2710:2740" ph="DELETE FROM " />
             <marker date="1513025081411" expanded="true" signature="2710:2741" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
