@@ -21,7 +21,7 @@ class Application(wx.App):
 		self.login_window = None
 		self.student_list_window = None
 		self.add_enroll_window = None
-		self.jump_to_student_list_window(None, None)
+		self.jump_to_login_window(None, None)
 	
 	# self.jump_to_login_window(None)
 	

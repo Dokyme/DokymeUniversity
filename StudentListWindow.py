@@ -40,6 +40,7 @@ class StudentListWindow(wx.Frame):
 		self.btn_edit_student_info = None
 		self.btn_refresh = None
 		self.btn_delete_student_info = None
+		self.current_row = None
 		self.__init_widgets()
 		self.__init_events()
 	
@@ -55,6 +56,7 @@ class StudentListWindow(wx.Frame):
 		self.Bind(wx.EVT_BUTTON, self.__refresh, self.btn_refresh)
 		self.Bind(wx.EVT_BUTTON, self.__delete_enroll, self.btn_delete_enroll)
 		self.Bind(wx.EVT_BUTTON, self.__add_enroll, self.btn_add_enroll)
+		self.Bind(wx.EVT_BUTTON, self.__confirm_info_update, self.btn_confirm_revise)
 		self.student_grid.Bind(wx.grid.EVT_GRID_CMD_CELL_LEFT_CLICK, self._search_full_info)
 	
 	def __add_enroll(self, event):
@@ -84,7 +86,7 @@ class StudentListWindow(wx.Frame):
 				wx.MessageDialog(self, u"删除选课成功~", style=wx.ICON_INFORMATION | wx.OK).ShowModal()
 			else:
 				wx.MessageDialog(self, u"删除选课失败！", style=wx.ICON_ERROR | wx.OK).ShowModal()
-			self._search_full_info(None)
+			self.__refresh(None)
 	
 	def __confirm_info_update(self, event):
 		"""
@@ -102,6 +104,7 @@ class StudentListWindow(wx.Frame):
 			wx.MessageDialog(self, message=u"信息更新成功~", style=wx.ICON_INFORMATION | wx.OK).ShowModal()
 		else:
 			wx.MessageDialog(self, message=u"信息更新失败！", style=wx.ICON_ERROR | wx.OK).ShowModal()
+		self.__refresh(None)
 	
 	def _search_full_info(self, event):
 		"""
@@ -109,9 +112,10 @@ class StudentListWindow(wx.Frame):
 		:return:
 		"""
 		if not event:
-			student = self.student_list.table[self.student_grid.GetSelectedRows()[0]]
+			student = self.student_list.table[self.current_row]
 		else:
 			student = self.student_list.table[event.GetRow()]
+			self.current_row = event.GetRow()
 		sid = student.sid
 		self.input_sid_value.SetValue(str(sid))
 		self.input_sname_value.SetValue(student.sname)
@@ -145,13 +149,14 @@ class StudentListWindow(wx.Frame):
 		:param event:
 		:return:
 		"""
-		row = self.student_grid.GetSelectedRows()[0]
+		row = self.current_row
 		student = self.student_list.table[row]
 		result = self.student_accessor.delete_specified_student(student.sid)
 		if result != 0:
 			wx.MessageDialog(self, message=u"删除学生信息成功~", style=wx.ICON_INFORMATION | wx.OK).ShowModal()
 		else:
 			wx.MessageDialog(self, message=u"删除学生信息失败!", style=wx.ICON_ERROR | wx.OK).ShowModal()
+		self.__refresh(None)
 	
 	def __search_sid(self, event):
 		"""
@@ -169,8 +174,8 @@ class StudentListWindow(wx.Frame):
 				self.student_list.table = []
 			else:
 				self.student_list.table = [result]
-			self.student_grid.ForceRefresh()
-			self.student_grid.GoToCell(row=0, col=1)
+		self.student_grid.ForceRefresh()
+		self.student_grid.GoToCell(row=0, col=1)
 	
 	def __search_sname(self, event):
 		"""
@@ -338,7 +343,7 @@ class StudentListWindow(wx.Frame):
 		:param input_:
 		:return:
 		"""
-		row = self.student_grid.GetSelectedRows()[0]
+		row = self.current_row
 		if str(getattr(self.student_list.table[row], attr)) == input_.GetValue():
 			return 1
 		else:

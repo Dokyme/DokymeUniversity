@@ -91,7 +91,7 @@ class LoginWindow(wx.Frame):
 			wx.MessageDialog(self, message=u"用户名不存在", style=wx.ICON_ERROR | wx.OK).ShowModal()
 		else:
 			self.close()
-			self.app.jump_to_login_window(None, None)
+			self.app.jump_to_student_list_window(None, None)
 	
 	def __clear(self, event):
 		"""

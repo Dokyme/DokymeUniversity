@@ -7,10 +7,8 @@ class UserAccessor(object):
 	"""
 	用户登陆，数据库访问模块
 	
-	管理员：能够支持全部功能（查询所有学生基本信息，修改所有学生基本信息，查询学生选课信息，修改学生选课信息，删除某门课的全部信息）
-	教师：能够支持部分功能（查询所有学生基本信息，查询学生选课信息，修改学生选课信息）
-	学生：能够支持极少部分功能（查询所有学生基本信息）
 	"""
+	
 	def __init__(self):
 		pass
 	
@@ -55,9 +53,9 @@ class UserAccessor(object):
 
 if __name__ == '__main__':
 	ua = UserAccessor()
-	# print(ua.login("admin", "123456"))
-	# print(ua.login("teacher", "111"))
-	# print(ua.login("student", "222"))
-	# print(ua.login("zzz", "zzz"))
-	# print(ua.login("admin", "zzz"))
-	# print(ua.revise_password("student", "foo"))
+# print(ua.login("admin", "123456"))
+# print(ua.login("teacher", "111"))
+# print(ua.login("student", "222"))
+# print(ua.login("zzz", "zzz"))
+# print(ua.login("admin", "zzz"))
+# print(ua.revise_password("student", "foo"))
